@@ -1,19 +1,21 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import SearchBar from "./components/SearchBar";
-import TxnList from "./components/TxnList";
 import Detail from "./components/Detail";
-import BlockList from "./components/BlockList";
+import TokenList from "./components/TokenList";
+import BlockList from './components/BlockList';
+import SearchBarContainer from "./containers/SearchBarContainer";
+import TxnListContainer from "./containers/TxnListContainer";
 
-const router = () => {
+const routes = () => {
     return (
         <Switch>
-            <Route path='/' exact component={ SearchBar } />
-            <Route path='/list' components={ TxnList } />
+            <Route path='/' exact component={ SearchBarContainer } />
+            <Route path='/txnList' component={ TxnListContainer} />
             <Route path='/detail' component={ Detail }/>
-            <Route path='/block' component={ BlockList }/>
+            <Route path='/blockDetail' component={ BlockList } />
+            <Route path='/tokenList' component={ TokenList } />
         </Switch>
     );
 };
 
-export default router;
+export default routes;

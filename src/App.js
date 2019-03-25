@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Container, Image, Divider } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
+import 'semantic-ui-css/semantic.min.css';
 import './App.css';
+import logo from './logo.png';
+import Routes from './Routes';
+
+const Navigation = () => <nav>
+  <div className='logo-title'>
+    <Image src={logo}
+           size='tiny'
+           verticalAlign='middle'
+           centered={true}
+    />
+    <p id='title' align='center'>
+      <Link to='/' >Ethereum Account Browser</Link>
+    </p>
+  </div>
+</nav>;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Container>
+        <Navigation/>
+        <Divider/>
+        <Routes/>
+      </Container>
     );
   }
 }
