@@ -9,14 +9,6 @@ This Application lets user to browser any Ethereum account with a valid ethereum
 - [Semantic UI](https://react.semantic-ui.com/)
 - [Ethereum Scan API](https://etherscan.io/apis)
 
-### Installation Steps
-```$xslt
-$ git clone git@github.com:Rakhee06/ethereum-account-browser.git
-$ npm install
-$ npm start
-```
-- The application will be hosted on `localhost:3000`
-
 ### .env file config
 - Make a .env file on the root folder and populate the file with below URLS
 - Make sure you have `dotenv` package installed
@@ -27,6 +19,13 @@ REACT_APP_ETHEREUM_BLOCK_URL=https://api.etherscan.io/api?module=block&action=ge
 REACT_APP_ERC_TOKEN_URL=http://api.etherscan.io/api?module=account&action=tokentx
 REACT_APP_API_KEY=YOUR_API_KEY
 ```
+### Installation Steps
+```$xslt
+$ git clone git@github.com:Rakhee06/ethereum-account-browser.git
+$ npm install
+$ npm start
+```
+- The application will be hosted on `localhost:3000`
 
 ### Features
 - State Management: Redux & Redux-Saga to store the state of the components and provided a middleware to handle side-effects
