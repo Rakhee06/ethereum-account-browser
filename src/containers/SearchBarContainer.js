@@ -17,7 +17,7 @@ class SearchBarContainer extends Component {
         super(props);
         this.state = {
             inputText: '',
-            selectedOption: 'Txn Address',
+            selectedOption: 'Eth Address',
             isVisible: false,
             errorMessage: '',
             isLoading: false
@@ -36,7 +36,7 @@ class SearchBarContainer extends Component {
     handleButtonClicked = () => {
         this.setState({ isVisible: true});
 
-        if ((this.state.selectedOption === 'Txn Address') && (this.state.inputText.startsWith('0x'))) {
+        if ((this.state.selectedOption === 'Eth Address') && (this.state.inputText.startsWith('0x'))) {
             this.props.requestTxnList(this.state.inputText);
             this.props.history.replace('/txnList');
             this.setState({ inputText: ''});
@@ -56,11 +56,11 @@ class SearchBarContainer extends Component {
 
     render() {
         const options = [
-            { key: 'Txn Address', text: 'Txn Address', value: 'Txn Address' },
+            { key: 'Eth Address', text: 'Eth Address', value: 'Eth Address' },
             { key: 'Block Number', text: 'Block Number', value: 'Block Number'},
         ];
         let listView = null;
-        if(this.state.isVisible && this.state.selectedOption === 'Txn Address') {
+        if(this.state.isVisible && this.state.selectedOption === 'Eth Address') {
             listView = <TxnListContainer listOfTxn={this.props.listOfTxn}/>
         }
         else if (this.state.isVisible && this.state.selectedOption === 'Block Number')  {
@@ -73,7 +73,7 @@ class SearchBarContainer extends Component {
                 <div className='searchBar'>
                     <div>
                         <Input
-                            label={<Dropdown defaultValue='Txn Address' options={options} onChange={(e, data) => this.setState({ selectedOption: data.value})}/>}
+                            label={<Dropdown defaultValue='Eth Address' options={options} onChange={(e, data) => this.setState({ selectedOption: data.value})}/>}
                             value={this.state.inputText}
                             onChange={this.handleInputText}
                         />
