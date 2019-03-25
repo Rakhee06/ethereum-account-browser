@@ -9,7 +9,7 @@ config({path: '../../../.env'});
  */
 
 export async function getTxnList(address) {
-    return await axios.get(`${process.env.REACT_APP_ETHEREUM_TXN_URL}&address=`+ address +`&page=&offset=10&sort=asc&apikey=${process.env.REACT_APP_API_KEY}`)
+    return await axios.get(`${process.env.REACT_APP_ETHEREUM_TXN_URL}&address=`+ address +`&sort=asc&apikey=${process.env.REACT_APP_API_KEY}`)
         .then(function (response) {
             return response.data.result;
         })
@@ -25,7 +25,7 @@ export async function getTxnList(address) {
  */
 
 export async function getBlockList(address) {
-    return await axios.get(`${process.env.REACT_APP_ETHEREUM_BLOCK_URL}&blockno=`+ address +`&page=1&offset=10&sort=asc&apikey=${process.env.REACT_APP_API_KEY}`)
+    return await axios.get(`${process.env.REACT_APP_ETHEREUM_BLOCK_URL}&blockno=`+ address +`&sort=asc&apikey=${process.env.REACT_APP_API_KEY}`)
         .then(function (response) {
             return response.data.result;
         })
