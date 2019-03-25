@@ -17,6 +17,17 @@ $ npm start
 ```
 - The application will be hosted on `localhost:3000`
 
+### .env file config
+- Make a .env file on the root folder and populate the file with below URLS
+- Make sure you have `dotenv` package installed
+    
+```$xslt
+REACT_APP_ETHEREUM_TXN_URL=https://api.etherscan.io/api?module=account&action=txlist
+REACT_APP_ETHEREUM_BLOCK_URL=https://api.etherscan.io/api?module=block&action=getblockreward
+REACT_APP_ERC_TOKEN_URL=http://api.etherscan.io/api?module=account&action=tokentx
+REACT_APP_API_KEY=YOUR_API_KEY
+```
+
 ### Features
 - State Management: Redux & Redux-Saga to store the state of the components and provided a middleware to handle side-effects
 - Uses Ethereum Scan API to fetch data related to Ethereum Account and can be navigated by
