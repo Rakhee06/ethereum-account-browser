@@ -5,7 +5,7 @@ config({path: '../../../.env'});
 /**
  *
  * @param address
- * @returns {Promise<AxiosResponse<Object>>} Returns the list of Transaction Details with the given transaction address
+ * @returns {Promise<AxiosResponse<Object>>} Returns the list of Transaction Details with the given ethereum address
  */
 
 export async function getTxnList(address) {
@@ -37,7 +37,7 @@ export async function getBlockList(address) {
 /**
  *
  * @param address
- * @returns {Promise<AxiosResponse<Object>>} Returns list of ERC 20 token details with the given transaction address
+ * @returns {Promise<AxiosResponse<Object>>} Returns list of ERC 20 token details with the given ethereum address
  */
 
 export async function getTokenList(address) {
