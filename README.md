@@ -1,6 +1,6 @@
 # Ethereum Account Browser
 
-This Application lets user to browser any Ethereum account with a valid transaction address and block number.
+This Application lets user to browser any Ethereum account with a valid ethereum address/block number.
 
 ### Technologies Used
 - [React](https://reactjs.org/)
